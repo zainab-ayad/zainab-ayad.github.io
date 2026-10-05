@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Name | Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fa;--card:#fff;--ink:#14213d;--mute:#5b6479;--line:#d9deea;--acc:#2f5bff;--hi:#ffd23f;--hi-ink:#14213d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1626;--card:#172038;--ink:#eef1f8;--mute:#9aa5bf;--line:#2a3550;--acc:#7b9bff}}
+:root[data-theme="dark"]{--bg:#0f1626;--card:#172038;--ink:#eef1f8;--mute:#9aa5bf;--line:#2a3550;--acc:#7b9bff}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Hanken Grotesk",system-ui,sans-serif;
+background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;background:var(--bg);opacity:.93;z-index:-1}
+a{color:var(--acc)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:700}
+nav div{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--acc)}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+h1{font-size:clamp(2.4rem,6.5vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+h1 mark{background:var(--hi);color:var(--hi-ink);padding:0 .12em}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:22px}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:56px 0 72px}
+.hero p{color:var(--mute);max-width:46ch;margin:22px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:700;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.p{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--hi);color:var(--hi-ink);border-color:var(--hi)}
+.query{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:.9rem}
+.query pre{margin:0;padding:14px 16px;font:500 .82rem/1.6 ui-monospace,Menlo,Consolas,monospace;border-bottom:1px solid var(--line);overflow-x:auto}
+.query table{width:100%;border-collapse:collapse}
+.query td,.query th{padding:8px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.query th{color:var(--mute);font-weight:500}
+.query tr.top td{background:var(--hi);color:var(--hi-ink);font-weight:700}
+section{padding:36px 0}
+.about{max-width:62ch;color:var(--mute)}
+.proj{display:grid;grid-template-columns:1fr 1.3fr;gap:24px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;margin-bottom:16px}
+.proj h3{font-size:1.3rem;margin-bottom:8px}
+.proj p{margin:0 0 10px}
+.proj dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.95rem}
+.proj dt{color:var(--mute)}
+.proj dd{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.tags span{border:1px solid var(--line);border-radius:4px;padding:1px 8px;font-size:.82rem;color:var(--mute)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.skills div{border-left:4px solid var(--acc);padding-left:14px}
+.skills b{display:block;margin-bottom:2px}
+.skills span{color:var(--mute);font-size:.95rem}
+.contact{padding:56px 0 40px}
+.contact a{font-weight:700;font-size:1.2rem}
+footer{color:var(--mute);font-size:.9rem;padding:20px 0 40px;border-top:1px solid var(--line)}
+@media(max-width:760px){.hero,.proj{grid-template-columns:1fr}.hero{padding:32px 0 48px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><span>Your Name</span><div><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div>
+<h1>I turn messy data into <mark>clear decisions.</mark></h1>
+<p>Data analyst from Egypt. I clean data, write SQL, and build dashboards that answer real business questions. [Edit this line with your focus: sales, marketing, finance...]</p>
+<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</div>
+<div class="query" aria-label="Sample SQL query and result">
+<pre>SELECT region, SUM(revenue) AS total
+FROM sales
+GROUP BY region
+ORDER BY total DESC;</pre>
+<table>
+<tr><th>region</th><th>total</th></tr>
+<tr class="top"><td>Cairo</td><td>1,240,000</td></tr>
+<tr><td>Alexandria</td><td>870,000</td></tr>
+<tr><td>Giza</td><td>640,000</td></tr>
+</table>
+</div>
+</header>
+
+<section>
+<h2>About</h2>
+<p class="about">[Write 2 to 3 sentences: your background, what you studied or learned, the type of data you enjoy working with, and the kind of role you want.]</p>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<article class="proj">
+<div>
+<h3>Sales Performance Dashboard</h3>
+<div class="tags"><span>Power BI</span><span>SQL</span><span>Excel</span></div>
+<p>[One sentence on what this project is.]</p>
+<a href="#">View dashboard</a> &nbsp; <a href="#">GitHub</a>
+</div>
+<dl>
+<dt>Question</dt><dd>Which products and regions drive the most revenue?</dd>
+<dt>Data</dt><dd>[Source, number of rows, time period]</dd>
+<dt>Insight</dt><dd>[Your main finding, with a number]</dd>
+<dt>Action</dt><dd>[What you recommend based on it]</dd>
+</dl>
+</article>
+
+<article class="proj">
+<div>
+<h3>Customer Data Cleaning and EDA</h3>
+<div class="tags"><span>Python</span><span>Pandas</span><span>Matplotlib</span></div>
+<p>[One sentence on what this project is.]</p>
+<a href="#">Notebook</a> &nbsp; <a href="#">GitHub</a>
+</div>
+<dl>
+<dt>Question</dt><dd>[What were you trying to find out?]</dd>
+<dt>Data</dt><dd>[Source and the problems you fixed: nulls, duplicates, formats]</dd>
+<dt>Insight</dt><dd>[Your main finding, with a number]</dd>
+<dt>Action</dt><dd>[What you recommend based on it]</dd>
+</dl>
+</article>
+
+<article class="proj">
+<div>
+<h3>SQL Analysis: [Topic]</h3>
+<div class="tags"><span>SQL</span><span>Joins</span><span>Window functions</span></div>
+<p>[One sentence on what this project is.]</p>
+<a href="#">GitHub</a>
+</div>
+<dl>
+<dt>Question</dt><dd>[Business question]</dd>
+<dt>Data</dt><dd>[Tables and how they connect]</dd>
+<dt>Insight</dt><dd>[Your main finding, with a number]</dd>
+<dt>Action</dt><dd>[What you recommend based on it]</dd>
+</dl>
+</article>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><b>Querying</b><span>SQL, joins, CTEs, window functions</span></div>
+<div><b>Analysis</b><span>Python, Pandas, Excel, statistics basics</span></div>
+<div><b>Visualization</b><span>Power BI, Tableau, Matplotlib</span></div>
+<div><b>Communication</b><span>Turning findings into clear recommendations</span></div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact</h2>
+<p><a href="mailto:you@email.com">you@email.com</a></p>
+<p><a href="#">LinkedIn</a> &nbsp; <a href="#">GitHub</a> &nbsp; <a href="#">Kaggle</a></p>
+</section>
+
+<footer>&copy; 2026 Your Name</footer>
+</div>
+</body>
+</html>
