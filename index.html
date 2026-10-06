@@ -41,12 +41,15 @@ h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:22px}
 .query tr.top td{background:var(--hi);color:var(--hi-ink);font-weight:700}
 section{padding:36px 0}
 .about{max-width:62ch;color:var(--mute)}
-.proj{display:grid;grid-template-columns:1fr 1.3fr;gap:24px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;margin-bottom:16px}
+.proj{display:grid;grid-template-columns:1fr 1.6fr;gap:24px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;margin-bottom:16px}
 .proj h3{font-size:1.3rem;margin-bottom:8px}
 .proj p{margin:0 0 10px}
 .proj dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.95rem}
 .proj dt{color:var(--mute)}
 .proj dd{margin:0}
+.kpi{margin:4px 0 14px;color:var(--mute);font-size:.95rem}.kpi b{color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.25rem}
+.proj ul{margin:0;padding-left:18px}.proj li{margin-bottom:6px}
+.shot{grid-column:1/-1;margin:8px 0 0}.shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px}.shot figcaption{color:var(--mute);font-size:.88rem;margin-top:8px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
 .tags span{border:1px solid var(--line);border-radius:4px;padding:1px 8px;font-size:.82rem;color:var(--mute)}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
@@ -93,17 +96,31 @@ ORDER BY total DESC;</pre>
 
 <article class="proj">
 <div>
-<h3>Sales Performance Dashboard</h3>
-<div class="tags"><span>Power BI</span><span>SQL</span><span>Excel</span></div>
-<p>[One sentence on what this project is.]</p>
-<a href="#">View dashboard</a> &nbsp; <a href="#">GitHub</a>
+<h3>Global Superstore Sales Dashboard</h3>
+<div class="tags"><span>Excel</span><span>Pivot Tables</span><span>Slicers</span></div>
+<p>An interactive Excel dashboard on four years of global retail orders. It shows where the business grows and where it loses money.</p>
+<div class="kpi"><b>$12.6M</b> sales<br><b>$1.47M</b> profit<br><b>11.6%</b> margin</div>
+<a href="#">Download workbook</a> &nbsp; <a href="#">GitHub</a>
 </div>
 <dl>
-<dt>Question</dt><dd>Which products and regions drive the most revenue?</dd>
-<dt>Data</dt><dd>[Source, number of rows, time period]</dd>
-<dt>Insight</dt><dd>[Your main finding, with a number]</dd>
-<dt>Action</dt><dd>[What you recommend based on it]</dd>
+<dt>Question</dt><dd>Which categories, regions and countries make profit, and which lose it?</dd>
+<dt>Data</dt><dd>51,290 order lines, 25,035 orders and 4,873 customers, from 2011 to 2014. No missing values or duplicates.</dd>
+<dt>Insights</dt><dd><ul>
+<li>Sales grew every year, from $2.26M to $4.30M (+90%), while margin stayed near 11 to 12%.</li>
+<li>Furniture has $4.1M in sales but only a 6.9% margin. Technology earns 14% and the most profit ($664K).</li>
+<li>Tables is the only sub-category that loses money: -$64K on $757K of sales.</li>
+<li>Turkey (-$98K), Nigeria (-$81K) and the Netherlands (-$41K) are the biggest loss-making countries.</li>
+<li>Southeast Asia earns only 2% margin on $884K of sales. North Asia earns 19.5%.</li>
+<li>24% of order lines lose money, adding up to -$921K.</li>
+</ul></dd>
+<dt>Action</dt><dd><ul>
+<li>Reprice or review the Tables line.</li>
+<li>Audit pricing and shipping costs in Turkey, Nigeria and the Netherlands.</li>
+<li>Put more marketing into Technology (Copiers, Phones) and the high-margin regions: North Asia, Central Asia and North.</li>
+<li>Find why Southeast Asia and EMEA earn so little margin.</li>
+</ul></dd>
 </dl>
+<figure class="shot"><img src="dashboard.png" alt="Excel dashboard titled Sales and Profitability Analysis, with KPI cards, trend, category, country and ship mode charts, and slicers for region, segment, category and date" loading="lazy"><figcaption>The interactive Excel dashboard. Slicers filter every chart by region, segment, category and date.</figcaption></figure>
 </article>
 
 <article class="proj">
@@ -157,4 +174,3 @@ ORDER BY total DESC;</pre>
 </div>
 </body>
 </html>
-
