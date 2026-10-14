@@ -46,6 +46,7 @@ h2{font-size:clamp(1.9rem,6vw,2.7rem);line-height:1.2;margin-bottom:22px}
 .card ul{padding-left:22px;color:var(--muted);margin-bottom:8px}
 .card li{margin-bottom:8px}
 .shotimg{margin:18px 0}.shotimg img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:18px}
+.shotimg img+img{margin-top:12px}
 .shotimg figcaption{color:var(--muted);font-size:.9rem;margin-top:8px}
 .two{display:grid;gap:22px}
 @media(min-width:760px){.two{grid-template-columns:1fr 1fr}.two .card{margin:0}}
@@ -90,50 +91,18 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offse
   <article class="card">
     <span class="tag">Excel &middot; Sales Analytics</span>
     <h3>Global Superstore Sales Dashboard</h3>
-    <p>An interactive Excel dashboard on four years of global retail orders. It shows where the business grows and where it loses money.</p>
-    <span class="chip">$12.6M sales</span><span class="chip">$1.47M profit</span><span class="chip">11.6% margin</span>
-    <h4 class="k">Question</h4>
-    <p>Which categories, regions and countries make profit, and which lose it?</p>
-    <h4 class="k">Data</h4>
-    <p>51,290 order lines, 25,035 orders and 4,873 customers, from 2011 to 2014. No missing values or duplicates.</p>
-    <h4 class="k">Insights</h4>
-    <ul>
-      <li>Sales grew every year, from $2.26M to $4.30M (+90%), while margin stayed near 11 to 12%.</li>
-      <li>Furniture has $4.1M in sales but only a 6.9% margin. Technology earns 14% and the most profit ($664K).</li>
-      <li>Tables is the only sub-category that loses money: -$64K on $757K of sales.</li>
-      <li>Turkey (-$98K), Nigeria (-$81K) and the Netherlands (-$41K) are the biggest loss-making countries.</li>
-      <li>Southeast Asia earns only 2% margin on $884K of sales. North Asia earns 19.5%.</li>
-      <li>24% of order lines lose money, adding up to -$921K.</li>
-    </ul>
-    <h4 class="k">Action</h4>
-    <ul>
-      <li>Reprice or review the Tables line.</li>
-      <li>Audit pricing and shipping costs in Turkey, Nigeria and the Netherlands.</li>
-      <li>Put more marketing into Technology (Copiers, Phones) and the high-margin regions: North Asia, Central Asia and North.</li>
-      <li>Find why Southeast Asia and EMEA earn so little margin.</li>
-    </ul>
-    <figure class="shotimg"><img src="Dashboard.PNG" alt="Excel dashboard titled Sales and Profitability Analysis, with KPI cards, trend, category, country and ship mode charts, and slicers for region, segment, category and date" loading="lazy"><figcaption>Slicers filter every chart by region, segment, category and date.</figcaption></figure>
+    <p>Interactive Excel dashboard on 51K retail orders showing that sales grew 90% in four years, yet Furniture earns only a 6.9% margin and Tables is the one sub-category losing money.</p>
+    <figure class="shotimg"><img src="Dashboard.PNG" alt="Excel dashboard titled Sales and Profitability Analysis with KPI cards, charts and slicers" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+    <span class="chip">$12.6M sales</span><span class="chip">$1.47M profit</span><span class="chip">11.6% margin</span><br>
     <span class="chip">Excel</span><span class="chip">Pivot Tables</span><span class="chip">Slicers</span>
   </article>
 
   <article class="card">
     <span class="tag">Power BI &middot; Operations Analytics</span>
     <h3>Call Center Workforce and Service Level Analysis</h3>
-    <p>A Power BI report on contact center operations. It tracks service level, abandonment, handle time and staffing across sites, channels and business units.</p>
-    <span class="chip">2.81M contacts offered</span><span class="chip">5.3% abandoned</span><span class="chip">82.5% avg service level</span>
-    <h4 class="k">Question</h4>
-    <p>Is the contact center staffed well enough to meet its service targets, and where does it fall short?</p>
-    <h4 class="k">Data</h4>
-    <p>10,000 interval records and 30 columns, from 2021 to 2026. It covers 58 sites in 3 regions, 3 channels (voice, chat, email) and 5 business units. No missing values or duplicates, but the date column mixed two formats and had to be standardized.</p>
-    <h4 class="k">Insights</h4>
-    <ul>
-      <li>Of 2.81M contacts offered, 2.66M were handled and 149K were abandoned (5.3%).</li>
-      <li>Average service level was 82.5%, but only 61% of intervals reached 80%.</li>
-      <li>Intervals with no spare agents (scheduled equal to required) abandoned 10.5% of contacts. With one extra agent the rate halved to 5.1%.</li>
-      <li>Actual volume ran 1.8% above the forecast.</li>
-      <li>Regions, channels and business units perform almost the same.</li>
-    </ul>
-    <div class="shot"><!-- Add: <img src="callcenter.png" alt="Call center dashboard"> -->Dashboard screenshot goes here</div>
+    <p>Power BI report on 2.8M customer contacts showing that one extra scheduled agent halves the abandonment rate, from 10.5% down to 5.1%.</p>
+    <figure class="shotimg"><img src="callcenter-1.png" alt="Power BI call center dashboard, page 1" loading="lazy" onerror="this.style.display='none'"><img src="callcenter-2.png" alt="Power BI call center dashboard, page 2" loading="lazy" onerror="this.style.display='none'"><img src="callcenter-3.png" alt="Power BI call center dashboard, page 3" loading="lazy" onerror="this.style.display='none'"></figure>
+    <span class="chip">2.81M contacts</span><span class="chip">5.3% abandoned</span><span class="chip">82.5% service level</span><br>
     <span class="chip">Power BI</span><span class="chip">Workforce Analytics</span><span class="chip">KPI Reporting</span>
   </article>
 
