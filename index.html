@@ -1,191 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Your Name | Data Analyst</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zainab Ayad | Data Analyst</title>
 <style>
-:root{--bg:#f6f7fa;--card:#fff;--ink:#14213d;--mute:#5b6479;--line:#d9deea;--acc:#2f5bff;--hi:#ffd23f;--hi-ink:#14213d;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1626;--card:#172038;--ink:#eef1f8;--mute:#9aa5bf;--line:#2a3550;--acc:#7b9bff}}
-:root[data-theme="dark"]{--bg:#0f1626;--card:#172038;--ink:#eef1f8;--mute:#9aa5bf;--line:#2a3550;--acc:#7b9bff}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-*,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Hanken Grotesk",system-ui,sans-serif;
-background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;background-attachment:fixed}
-body::before{content:"";position:fixed;inset:0;background:var(--bg);opacity:.93;z-index:-1}
-a{color:var(--acc)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
-.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:700}
-nav div{display:flex;gap:20px;flex-wrap:wrap}
-nav a{color:var(--ink);text-decoration:none;font-weight:500}
-nav a:hover{color:var(--acc)}
-h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
-h1{font-size:clamp(2.4rem,6.5vw,4.6rem);font-weight:800;letter-spacing:-.02em}
-h1 mark{background:var(--hi);color:var(--hi-ink);padding:0 .12em}
-h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:22px}
-.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:56px 0 72px}
-.hero p{color:var(--mute);max-width:46ch;margin:22px 0 28px}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:700;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
-.btn.p{background:var(--ink);color:var(--bg)}
-.btn:hover{background:var(--hi);color:var(--hi-ink);border-color:var(--hi)}
-.query{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:.9rem}
-.query pre{margin:0;padding:14px 16px;font:500 .82rem/1.6 ui-monospace,Menlo,Consolas,monospace;border-bottom:1px solid var(--line);overflow-x:auto}
-.query table{width:100%;border-collapse:collapse}
-.query td,.query th{padding:8px 16px;text-align:left;border-bottom:1px solid var(--line)}
-.query th{color:var(--mute);font-weight:500}
-.query tr.top td{background:var(--hi);color:var(--hi-ink);font-weight:700}
-section{padding:36px 0}
-.about{max-width:62ch;color:var(--mute)}
-.proj{display:grid;grid-template-columns:1fr 1.6fr;gap:24px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;margin-bottom:16px}
-.proj h3{font-size:1.3rem;margin-bottom:8px}
-.proj p{margin:0 0 10px}
-.proj dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.95rem}
-.proj dt{color:var(--mute)}
-.proj dd{margin:0}
-.kpi{margin:4px 0 14px;color:var(--mute);font-size:.95rem}.kpi b{color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.25rem}
-.proj ul{margin:0;padding-left:18px}.proj li{margin-bottom:6px}
-.shot{grid-column:1/-1;margin:8px 0 0}.shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px}.shot img+img{margin-top:12px}.shot figcaption{color:var(--mute);font-size:.88rem;margin-top:8px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
-.tags span{border:1px solid var(--line);border-radius:4px;padding:1px 8px;font-size:.82rem;color:var(--mute)}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.skills div{border-left:4px solid var(--acc);padding-left:14px}
-.skills b{display:block;margin-bottom:2px}
-.skills span{color:var(--mute);font-size:.95rem}
-.contact{padding:56px 0 40px}
-.contact a{font-weight:700;font-size:1.2rem}
-footer{color:var(--mute);font-size:.9rem;padding:20px 0 40px;border-top:1px solid var(--line)}
-@media(max-width:760px){.hero,.proj{grid-template-columns:1fr}.hero{padding:32px 0 48px}}
+:root{--bg:#0f1024;--card:rgba(15,17,40,.72);--line:rgba(255,255,255,.12);--text:#f1f1fa;--muted:#aeb2d6;--teal:#2dd4bf;--chip:#1f1f4d}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);line-height:1.7;background:linear-gradient(160deg,#2f2579 0%,#16204f 40%,#0f4a46 75%,#0f1024 100%) fixed,var(--bg)}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:10;background:rgba(14,15,34,.94);border-bottom:1px solid var(--line)}
+.nb{display:flex;justify-content:space-between;align-items:center;padding:14px 6%}
+.nb b{font-size:1.3rem}
+#mb{background:none;color:var(--text);border:1px solid var(--line);border-radius:14px;font-size:1.3rem;padding:6px 14px;cursor:pointer}
+#menu{display:none;flex-direction:column;padding:4px 6% 14px}
+#menu.open{display:flex}
+#menu a{padding:10px 0;color:var(--muted);border-top:1px solid var(--line)}
+@media(min-width:760px){#mb{display:none}#menu{display:flex!important;flex-direction:row;gap:26px;padding:0}#menu a{border:0;padding:0}nav{display:flex;justify-content:space-between;padding-right:6%}.nb{padding-right:0}}
+.wrap{max-width:960px;margin:auto}
+section{padding:48px 6%}
+.eyebrow{color:var(--teal);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;margin-bottom:10px}
+h1{font-size:clamp(2.8rem,10vw,4.6rem);line-height:1.08;margin-bottom:20px}
+h2{font-size:clamp(1.9rem,6vw,2.7rem);line-height:1.2;margin-bottom:22px}
+.lead{font-size:1.25rem;max-width:32em;margin-bottom:16px}
+.muted{color:var(--muted)}
+.avatar{width:140px;height:140px;border-radius:50%;border:4px solid #5b45c9;background:#1b1b45;display:grid;place-items:center;font-size:2.8rem;font-weight:700;margin-bottom:28px;object-fit:cover}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}
+.btn{padding:14px 26px;border-radius:18px;font-weight:700;border:1.5px solid var(--line);background:rgba(255,255,255,.06)}
+.btn.main{background:linear-gradient(135deg,#7c5cff,#4f7cff);border-color:transparent}
+.pills{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.info{display:inline-flex;gap:10px;align-items:center;padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.07);color:var(--muted);max-width:100%;overflow-wrap:anywhere}
+.card{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:28px;margin-bottom:22px}
+.tag{display:inline-block;padding:7px 18px;border-radius:999px;font-weight:700;color:var(--teal);background:rgba(45,212,191,.12);border:1px solid rgba(45,212,191,.4);margin-bottom:14px}
+.card h3{font-size:1.6rem;line-height:1.25;margin-bottom:12px}
+.card p{color:var(--muted);margin-bottom:16px}
+.chip{display:inline-block;padding:8px 18px;border-radius:999px;background:var(--chip);border:1px solid #34338a;color:var(--muted);margin:0 8px 10px 0}
+.mini{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:22px;padding:22px;margin-bottom:16px}
+.mini b{display:block;font-size:2.4rem;line-height:1.2}
+.mini .eyebrow{margin-bottom:8px}
+.stack{font-weight:700;font-size:1.15rem}
+.shot{border:1.5px dashed var(--line);border-radius:22px;padding:26px;text-align:center;color:var(--muted);margin-bottom:16px;font-size:.95rem}
+.shot img{max-width:100%;border-radius:16px}
+.k{color:var(--teal);font-size:1.05rem;margin:18px 0 6px}
+.card ul{padding-left:22px;color:var(--muted);margin-bottom:8px}
+.card li{margin-bottom:8px}
+.shotimg{margin:18px 0}.shotimg img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:18px}
+.shotimg figcaption{color:var(--muted);font-size:.9rem;margin-top:8px}
+.two{display:grid;gap:22px}
+@media(min-width:760px){.two{grid-template-columns:1fr 1fr}.two .card{margin:0}}
+footer{padding:36px 6%;text-align:center;color:var(--muted)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
 </style>
 </head>
 <body>
-<div class="wrap">
-<nav><span>Your Name</span><div><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+<nav>
+  <div class="nb"><b>Zainab Ayad</b><button id="mb" aria-label="Menu" aria-expanded="false">&#9776;</button></div>
+  <div id="menu"><a href="#home">Home</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+</nav>
 
-<header class="hero">
-<div>
-<h1>I turn messy data into <mark>clear decisions.</mark></h1>
-<p>Data analyst from Egypt. I clean data, write SQL, and build dashboards that answer real business questions. [Edit this line with your focus: sales, marketing, finance...]</p>
-<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
-</div>
-<div class="query" aria-label="Sample SQL query and result">
-<pre>SELECT region, SUM(revenue) AS total
-FROM sales
-GROUP BY region
-ORDER BY total DESC;</pre>
-<table>
-<tr><th>region</th><th>total</th></tr>
-<tr class="top"><td>Cairo</td><td>1,240,000</td></tr>
-<tr><td>Alexandria</td><td>870,000</td></tr>
-<tr><td>Giza</td><td>640,000</td></tr>
-</table>
-</div>
-</header>
+<section id="home"><div class="wrap">
+  <!-- Real photo: replace the next div with <img class="avatar" src="photo.jpg" alt="Zainab Ayad"> -->
+  <div class="avatar" aria-hidden="true">ZA</div>
+  <p class="eyebrow">Data Analyst Portfolio</p>
+  <h1>Zainab Ayad</h1>
+  <p class="lead">Data Analyst trained in Excel, SQL, and Power BI, with an engineering background and a focus on clear dashboards and business insights.</p>
+  <p class="muted" style="max-width:34em">Built analytics projects covering retail profitability, call center service levels, and machine failures, from 51K orders to 2.8M customer contacts.</p>
+  <div class="btns"><a class="btn main" href="#projects">View Projects</a><a class="btn" href="Zainab_Ayad_CV.pdf">Download CV</a></div>
+  <div class="pills">
+    <span class="info">&#128205; Luxor, Egypt</span>
+    <a class="info" href="mailto:Zyinab.Ayad@gmail.com">&#9993;&#65039; Zyinab.Ayad@gmail.com</a>
+    <a class="info" href="tel:+201111511023">&#128222; +20 111 151 1023</a>
+    <!-- <a class="info" href="YOUR_LINKEDIN_URL">&#128279; linkedin.com/in/your-name</a> -->
+    <a class="info" href="https://github.com/zainab-ayad">&#128187; github.com/zainab-ayad</a>
+  </div>
+</div></section>
 
-<section>
-<h2>About</h2>
-<p class="about">[Write 2 to 3 sentences: your background, what you studied or learned, the type of data you enjoy working with, and the kind of role you want.]</p>
-</section>
+<section><div class="wrap"><div class="card">
+  <div class="mini"><p class="eyebrow">Core stack</p><p class="stack">Power BI &middot; Excel &middot; SQL Server &middot; MySQL</p></div>
+  <div class="mini"><b>51K</b><span class="muted">orders analyzed</span></div>
+  <div class="mini"><b>2.8M</b><span class="muted">customer contacts analyzed</span></div>
+  <div class="mini"><b>3</b><span class="muted">end-to-end analytics projects</span></div>
+</div></div></section>
 
-<section id="projects">
-<h2>Projects</h2>
+<section id="projects"><div class="wrap">
+  <p class="eyebrow">Featured Projects</p>
+  <h2>Analytics projects focused on finding what drives profit, service quality, and failures.</h2>
 
-<article class="proj">
-<div>
-<h3>Global Superstore Sales Dashboard</h3>
-<div class="tags"><span>Excel</span><span>Pivot Tables</span><span>Slicers</span></div>
-<p>An interactive Excel dashboard on four years of global retail orders. It shows where the business grows and where it loses money.</p>
-<div class="kpi"><b>$12.6M</b> sales<br><b>$1.47M</b> profit<br><b>11.6%</b> margin</div>
-</div>
-<dl>
-<dt>Question</dt><dd>Which categories, regions and countries make profit, and which lose it?</dd>
-<dt>Data</dt><dd>51,290 order lines, 25,035 orders and 4,873 customers, from 2011 to 2014. No missing values or duplicates.</dd>
-<dt>Insights</dt><dd><ul>
-<li>Sales grew every year, from $2.26M to $4.30M (+90%), while margin stayed near 11 to 12%.</li>
-<li>Furniture has $4.1M in sales but only a 6.9% margin. Technology earns 14% and the most profit ($664K).</li>
-<li>Tables is the only sub-category that loses money: -$64K on $757K of sales.</li>
-<li>Turkey (-$98K), Nigeria (-$81K) and the Netherlands (-$41K) are the biggest loss-making countries.</li>
-<li>Southeast Asia earns only 2% margin on $884K of sales. North Asia earns 19.5%.</li>
-<li>24% of order lines lose money, adding up to -$921K.</li>
-</ul></dd>
-<dt>Action</dt><dd><ul>
-<li>Reprice or review the Tables line.</li>
-<li>Audit pricing and shipping costs in Turkey, Nigeria and the Netherlands.</li>
-<li>Put more marketing into Technology (Copiers, Phones) and the high-margin regions: North Asia, Central Asia and North.</li>
-<li>Find why Southeast Asia and EMEA earn so little margin.</li>
-</ul></dd>
-</dl>
-<figure class="shot"><img src="Dashboard.PNG" alt="Excel dashboard titled Sales and Profitability Analysis, with KPI cards, trend, category, country and ship mode charts, and slicers for region, segment, category and date" loading="lazy"><figcaption>The interactive Excel dashboard. Slicers filter every chart by region, segment, category and date.</figcaption></figure>
-</article>
+  <article class="card">
+    <span class="tag">Excel &middot; Sales Analytics</span>
+    <h3>Global Superstore Sales Dashboard</h3>
+    <p>An interactive Excel dashboard on four years of global retail orders. It shows where the business grows and where it loses money.</p>
+    <span class="chip">$12.6M sales</span><span class="chip">$1.47M profit</span><span class="chip">11.6% margin</span>
+    <h4 class="k">Question</h4>
+    <p>Which categories, regions and countries make profit, and which lose it?</p>
+    <h4 class="k">Data</h4>
+    <p>51,290 order lines, 25,035 orders and 4,873 customers, from 2011 to 2014. No missing values or duplicates.</p>
+    <h4 class="k">Insights</h4>
+    <ul>
+      <li>Sales grew every year, from $2.26M to $4.30M (+90%), while margin stayed near 11 to 12%.</li>
+      <li>Furniture has $4.1M in sales but only a 6.9% margin. Technology earns 14% and the most profit ($664K).</li>
+      <li>Tables is the only sub-category that loses money: -$64K on $757K of sales.</li>
+      <li>Turkey (-$98K), Nigeria (-$81K) and the Netherlands (-$41K) are the biggest loss-making countries.</li>
+      <li>Southeast Asia earns only 2% margin on $884K of sales. North Asia earns 19.5%.</li>
+      <li>24% of order lines lose money, adding up to -$921K.</li>
+    </ul>
+    <h4 class="k">Action</h4>
+    <ul>
+      <li>Reprice or review the Tables line.</li>
+      <li>Audit pricing and shipping costs in Turkey, Nigeria and the Netherlands.</li>
+      <li>Put more marketing into Technology (Copiers, Phones) and the high-margin regions: North Asia, Central Asia and North.</li>
+      <li>Find why Southeast Asia and EMEA earn so little margin.</li>
+    </ul>
+    <figure class="shotimg"><img src="Dashboard.PNG" alt="Excel dashboard titled Sales and Profitability Analysis, with KPI cards, trend, category, country and ship mode charts, and slicers for region, segment, category and date" loading="lazy"><figcaption>Slicers filter every chart by region, segment, category and date.</figcaption></figure>
+    <span class="chip">Excel</span><span class="chip">Pivot Tables</span><span class="chip">Slicers</span>
+  </article>
 
-<article class="proj">
-<div>
-<h3>Call Center Workforce and Service Level Analysis</h3>
-<div class="tags"><span>Power BI</span><span>Workforce Analytics</span><span>KPI Reporting</span></div>
-<p>A Power BI report on contact center operations. It tracks service level, abandonment, handle time and staffing across sites, channels and business units.</p>
-<div class="kpi"><b>2.81M</b> contacts offered<br><b>5.3%</b> abandoned<br><b>82.5%</b> avg service level</div>
-</div>
-<dl>
-<dt>Question</dt><dd>Is the contact center staffed well enough to meet its service targets, and where does it fall short?</dd>
-<dt>Data</dt><dd>10,000 interval records and 30 columns, from 2021 to 2026. It covers 58 sites in 3 regions, 3 channels (voice, chat, email) and 5 business units. No missing values or duplicates, but the date column mixed two formats and had to be standardized.</dd>
-<dt>Insights</dt><dd><ul>
-<li>Of 2.81M contacts offered, 2.66M were handled and 149K were abandoned (5.3%).</li>
-<li>Average service level was 82.5%, but only 61% of intervals reached 80%.</li>
-<li>Intervals with no spare agents (scheduled equal to required) abandoned 10.5% of contacts. With one extra agent the rate halved to 5.1%.</li>
-<li>Actual volume ran 1.8% above the forecast.</li>
-<li>Regions, channels and business units perform almost the same (abandon rate 5.2% to 5.5%). The gaps are at site level: Taiwan Hub and Toronto abandon about 6.1%, and Sao Paulo has the longest wait (57s against 40s overall).</li>
-</ul></dd>
-<dt>Action</dt><dd><ul>
-<li>Schedule at least one extra agent in intervals where staffing only meets the requirement.</li>
-<li>Review staffing and routing at Sao Paulo, Taiwan Hub and Toronto.</li>
-<li>Add a small volume buffer to the forecast, since actual demand runs about 2% higher.</li>
-</ul></dd>
-</dl>
-<figure class="shot">
-<img src="callcenter-1.png" alt="Power BI page 1: total offered volume, average service level, average wait time, call volume by site and calls by channel" loading="lazy">
-<img src="callcenter-2.png" alt="Power BI page 2: handled volume, abandonment rate, max wait time, offered versus planned volume by hour, abandoned volume versus wait time" loading="lazy">
-<img src="callcenter-3.png" alt="Power BI page 3: handle time, occupancy, calls per agent, shrinkage, productivity by hour and scheduled versus active agents" loading="lazy">
-<figcaption>The three pages of the Power BI report: volume and service, abandonment and forecast, and agent productivity and staffing.</figcaption>
-</figure>
-</article>
+  <article class="card">
+    <span class="tag">Power BI &middot; Operations Analytics</span>
+    <h3>Call Center Workforce and Service Level Analysis</h3>
+    <p>A Power BI report on contact center operations. It tracks service level, abandonment, handle time and staffing across sites, channels and business units.</p>
+    <span class="chip">2.81M contacts offered</span><span class="chip">5.3% abandoned</span><span class="chip">82.5% avg service level</span>
+    <h4 class="k">Question</h4>
+    <p>Is the contact center staffed well enough to meet its service targets, and where does it fall short?</p>
+    <h4 class="k">Data</h4>
+    <p>10,000 interval records and 30 columns, from 2021 to 2026. It covers 58 sites in 3 regions, 3 channels (voice, chat, email) and 5 business units. No missing values or duplicates, but the date column mixed two formats and had to be standardized.</p>
+    <h4 class="k">Insights</h4>
+    <ul>
+      <li>Of 2.81M contacts offered, 2.66M were handled and 149K were abandoned (5.3%).</li>
+      <li>Average service level was 82.5%, but only 61% of intervals reached 80%.</li>
+      <li>Intervals with no spare agents (scheduled equal to required) abandoned 10.5% of contacts. With one extra agent the rate halved to 5.1%.</li>
+      <li>Actual volume ran 1.8% above the forecast.</li>
+      <li>Regions, channels and business units perform almost the same.</li>
+    </ul>
+    <div class="shot"><!-- Add: <img src="callcenter.png" alt="Call center dashboard"> -->Dashboard screenshot goes here</div>
+    <span class="chip">Power BI</span><span class="chip">Workforce Analytics</span><span class="chip">KPI Reporting</span>
+  </article>
 
-<article class="proj">
-<div>
-<h3>SQL Analysis: [Topic]</h3>
-<div class="tags"><span>SQL</span><span>Joins</span><span>Window functions</span></div>
-<p>[One sentence on what this project is.]</p>
-<a href="#">GitHub</a>
-</div>
-<dl>
-<dt>Question</dt><dd>[Business question]</dd>
-<dt>Data</dt><dd>[Tables and how they connect]</dd>
-<dt>Insight</dt><dd>[Your main finding, with a number]</dd>
-<dt>Action</dt><dd>[What you recommend based on it]</dd>
-</dl>
-</article>
-</section>
+  <article class="card">
+    <span class="tag">Excel &middot; SQL &middot; Power BI</span>
+    <h3>FLM Machine Failure Analysis</h3>
+    <p>Data Analyst track project at Masar. Cleaned and analyzed machine failure records to find the most frequent faults and recurring problems, then presented the trends in a Power BI dashboard.</p>
+    <div class="shot"><!-- Add: <img src="flm.png" alt="FLM dashboard"> -->Dashboard screenshot goes here</div>
+    <span class="chip">Data Cleaning</span><span class="chip">Failure Trends</span><span class="chip">Dashboard</span>
+  </article>
+</div></section>
 
-<section id="skills">
-<h2>Skills</h2>
-<div class="skills">
-<div><b>Querying</b><span>SQL, joins, CTEs, window functions</span></div>
-<div><b>Analysis</b><span>Python, Pandas, Excel, statistics basics</span></div>
-<div><b>Visualization</b><span>Power BI, Tableau, Matplotlib</span></div>
-<div><b>Communication</b><span>Turning findings into clear recommendations</span></div>
-</div>
-</section>
+<section id="skills"><div class="wrap">
+  <p class="eyebrow">Skills</p>
+  <h2>Tools and methods I use</h2>
+  <div class="card"><h3>BI &amp; Visualization</h3><span class="chip">Power BI</span><span class="chip">Excel</span><span class="chip">Pivot Tables</span><span class="chip">Slicers</span><span class="chip">Dashboard Design</span><span class="chip">Data Visualization</span></div>
+  <div class="card"><h3>Databases &amp; Development</h3><span class="chip">SQL</span><span class="chip">SQL Server</span><span class="chip">MySQL</span><span class="chip">Entity Framework</span><span class="chip">C#</span><span class="chip">ASP.NET MVC</span></div>
+  <div class="card"><h3>Analytics</h3><span class="chip">Data Cleaning</span><span class="chip">KPI Reporting</span><span class="chip">Profitability Analysis</span><span class="chip">Workforce Analytics</span><span class="chip">Failure Analysis</span></div>
+  <div class="card"><h3>Professional Skills</h3><span class="chip">Problem Solving</span><span class="chip">Self-Learning</span><span class="chip">Self-Motivated</span><span class="chip">Teamwork</span><span class="chip">Communication</span></div>
+</div></section>
 
-<section class="contact" id="contact">
-<h2>Contact</h2>
-<p><a href="mailto:you@email.com">you@email.com</a></p>
-<p><a href="#">LinkedIn</a> &nbsp; <a href="#">GitHub</a> &nbsp; <a href="#">Kaggle</a></p>
-</section>
+<section id="about"><div class="wrap"><div class="card">
+  <p class="eyebrow">About</p>
+  <h2>An engineering mindset applied to business data</h2>
+  <p class="muted" style="margin-bottom:14px">I hold a BSc in Electrical Engineering (Communications) from Al-Azhar University and a Professional Diploma in Web and Mobile Development from ITI. In 2026 I completed the Data Analyst track at Masar, working with Excel, SQL, and Power BI.</p>
+  <p class="muted">My projects cover data cleaning, exploratory analysis, KPI reporting, and dashboard development. I enjoy turning raw data into clear insights that help teams make confident, data-driven decisions.</p>
+</div></div></section>
 
-<footer>&copy; 2026 Your Name</footer>
-</div>
+<section id="contact"><div class="wrap">
+  <p class="eyebrow">Contact</p>
+  <h2>Open to Data Analyst roles</h2>
+  <div class="btns" style="margin-top:0"><a class="btn main" href="mailto:Zyinab.Ayad@gmail.com">Email me</a><a class="btn" href="https://github.com/zainab-ayad">GitHub</a></div>
+</div></section>
+
+<footer>Zainab Ayad &middot; Luxor, Egypt</footer>
+<script>
+var b=document.getElementById('mb'),m=document.getElementById('menu');
+b.onclick=function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)};
+m.onclick=function(e){if(e.target.tagName==='A')m.classList.remove('open')};
+</script>
 </body>
 </html>
